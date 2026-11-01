@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+  <title>Sala Za Kikatoliki - User Privacy Hub</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #3498db;
+      --bg: #f4f7f6;
+      --card: #ffffff;
+      --text: #444;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: var(--card);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid var(--bg);
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+    }
+    h1 { color: var(--primary); margin: 0; font-size: 1.8rem; }
+    h2 { 
+      color: var(--accent); 
+      font-size: 1.2rem; 
+      text-transform: uppercase; 
+      letter-spacing: 1px;
+      margin-top: 30px;
+    }
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .lang-switcher button {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      padding: 8px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .lang-switcher button.active {
+      background: var(--accent);
+      color: white;
+    }
+    .content-box { display: none; }
+    .content-box.active { display: block; }
+    .badge {
+      background: #e8f4fd;
+      color: #2980b9;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    .footer-note {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>Sala Za Kikatoliki</h1>
+    <p>Privacy & Data Commitment</p>
+  </div>
+
+  <div class="lang-switcher">
+    <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
+    <button id="btn-sw" onclick="switchLang('sw')">Kiswahili</button>
+  </div>
+
+  <div id="en" class="content-box active">
+    <p><span class="badge">Revised: February 2026</span></p>
+    
+    <h2>I. Our Commitment</h2>
+    <p>Your spiritual journey is personal, and we believe your data should stay that way. This document outlines how <strong>Sala Za Kikatoliki</strong> operates to ensure your peace of mind while using our application.</p>
+
+    <h2>II. Data Transparency</h2>
+    <p>We do not operate central databases or tracking servers. The application is built to be self-contained. The only piece of information the app interacts with is:</p>
+    <ul>
+      <li><strong>Display Name:</strong> A name you provide to customize the interface. This stays strictly on your mobile hardware.</li>
+    </ul>
+
+    <h2>III. Third-Party Interactions</h2>
+    <p>We do not sell, trade, or leak your information. Since no data is sent to our servers, there is no digital trail shared with third-party advertisers or analytics firms.</p>
+
+    <h2>IV. User Control</h2>
+    <p>You have absolute sovereignty over your data. Because your name is stored in the app's local cache, removing the app or clearing the app storage via your phone's settings will permanently erase that data from existence.</p>
+
+    <h2>V. Safe for Families</h2>
+    <p>Our app is built for a multi-generational audience. We comply with family-friendly standards, ensuring that younger users can explore their faith in a secure environment without hidden tracking.</p>
+
+    <div style="margin-top:40px; padding-top:20px; border-top:1px solid #eee;">
+      <p><strong>Signed,</strong></p>
+      <p><strong>Anollian Mushi</strong><br>
+      CEO & Founder<br>
+      AnoDomino Company<br>
+    </div>
+    
+    <h2>VI. Outreach</h2>
+    <p>For inquiries, reach us at:</p>
+    <p style="color: var(--accent);">anollianmushi005@gmail.com / anodomino.info@gmail.com</p>
+  </div>
+
+  <div id="sw" class="content-box">
+    <p><span class="badge">Toleo: Februari 2026</span></p>
+    
+    <h2>I. Ahadi Yetu</h2>
+    <p>Safari yako ya kiroho ni jambo binafsi, na tunaamini taarifa zako zinapaswa kubaki hivyo. Maelezo haya yanafafanua jinsi <strong>Sala Za Kikatoliki</strong> inavyofanya kazi kulinda usalama wa taarifa unapotumia programu yetu.</p>
+
+    <h2>II. Uwazi wa Data</h2>
+    <p>Hatuna hifadhidata za mtandaoni (servers) wala mifumo ya kufuatilia mienendo yako katika programu yetu. Programu hii imeundwa kujitosheleza. Taarifa pekee ambayo programu hutumia ni:</p>
+    <ul>
+      <li><strong>Jina la Utambulisho:</strong> Jina unaloingiza ili kubinafsisha muonekano. Hili linabaki ndani ya simu yako pekee.</li>
+    </ul>
+
+    <h2>III. Uhusiano na Pande Nyingine</h2>
+    <p>Hatuziuzi wala kusambaza taarifa zako. Kwa kuwa hakuna data inayotumwa kwetu, hakuna rekodi inayoweza kufikiwa na makampuni ya matangazo au uchambuzi wa data.</p>
+
+    <h2>IV. Maamuzi ya Mtumiaji</h2>
+    <p>Una mamlaka kamili juu ya taarifa zako. Kwa kuwa jina lako limehifadhiwa kwenye kumbukumbu ya ndani ya programu, ukifuta programu au kusafisha "Data" kupitia mipangilio ya simu, taarifa hiyo itafutika moja kwa moja.</p>
+
+    <h2>V. Usalama kwa Familia</h2>
+    <p>Programu yetu imetengenezwa kwa ajili ya watu wa rika zote. Tunazingatia vigezo vya usalama wa familia, tukihakikisha kuwa watoto wanaweza kusali katika mazingira salama bila ufuatiliaji wowote wa siri.</p>
+
+    <div style="margin-top:40px; padding-top:20px; border-top:1px solid #eee;">
+      <p><strong>Imesainiwa na,</strong></p>
+      <p><strong>Anollian Mushi</strong><br>
+      Mkurugenzi Mkuu & Mwanzilishi<br>
+      AnoDomino Company<br>
+    </div>
+
+    <h2>VI. Mawasiliano</h2>
+    <p>Kwa maswali:</p>
+    <p style="color: var(--accent);">anollianmushi005@gmail.com / info.anodomino@gmail.com</p>
+  </div>
+    <h2></h2>
+
+    
+
+
+  <div class="footer-note">
+    &copy; 2026 Ora Et Labora by AnoDomino Company: Sala Za Kikatoliki. All Rights Reserved.
+  </div>
+</div>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.content-box').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-switcher button').forEach(el => el.classList.remove('active'));
+    
+    document.getElementById(lang).classList.add('active');
+    document.getElementById('btn-' + lang).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
