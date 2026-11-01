@@ -1,2 +1,2 @@
-# sala-za-kikatoliki-V04
+# sala-za-kikatoliki-privacy
 Clean privacy-policy repository for Sala za Kikatoliki
